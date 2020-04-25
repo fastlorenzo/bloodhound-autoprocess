@@ -1,7 +1,16 @@
 {
-  "name": "bloodhound-ingestor",
+  "name": "bloodhound-autoprocess",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://github.com/fastlorenzo/bloodhound-autoprocess",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/fastlorenzo/bloodhound-autoprocess.git"
+  },
+  "bugs": "https://github.com/fastlorenzo/bloodhound-autoprocess/issues",
+  "license": "GPL-3.0",
+  "author": "Lorenzo Bernardi <git@bernardi.be>",
+  "keywords": [],
   "prettier": {
     "tabWidth": 4,
     "trailingComma": "es5",
@@ -23,9 +32,6 @@
       "@babel/preset-react"
     ]
   },
-  "keywords": [],
-  "author": "",
-  "license": "GPL-3.0",
   "devDependencies": {
     "@babel/core": "^7.6.2",
     "@babel/node": "^7.6.2",

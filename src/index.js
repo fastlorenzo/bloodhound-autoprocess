@@ -13,7 +13,7 @@ import { join, basename } from 'path';
 import watch from 'glob-watcher';
 import Mutex from 'await-mutex'
 
-const INPUT_FOLDER = process.env.INPUT_FOLDER || './sample/*';
+const INPUT_FOLDER = process.env.INPUT_FOLDER || './data/*';
 const NEO4J_URL = process.env.NEO4J_URL || 'bolt://localhost:7687';
 const NEO4J_USER = process.env.NEO4J_USER || 'neo4j';
 const NEO4J_PASSWORD = process.env.NEO4J_PASSWORD || 'bloodhound';
