@@ -4,9 +4,13 @@ on:
   push:
     branches:
       - '*'
+    tags:
+      - '*'
   pull_request_target:
     branches:
       - '*'
+  release:
+    types: [published, created, edited]
 
 jobs:
   docker:
