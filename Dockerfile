@@ -3,17 +3,18 @@ FROM node:erbium-stretch AS build
 WORKDIR /app
 COPY package*.json ./
 COPY webpack.config.*.js ./
-RUN npm install
+RUN yarn install
 COPY ./src ./src
-RUN npm run build
+RUN yarn run build
 
 
 FROM node:erbium-stretch
+LABEL author="Lorenzo Bernardi <docker@bernardi.be>"
 
 WORKDIR /app
 RUN mkdir /app/data
 COPY package*.json ./
-RUN npm install
+RUN yarn install
 COPY --from=build /app/dist ./dist
 
 ENV INPUT_FOLDER './data/*'
@@ -24,4 +25,4 @@ ENV DELETE_PROCESSED true
 
 VOLUME [ "/app/data" ]
 
-CMD [ "npm", "start" ]
+CMD [ "yarn", "start" ]
